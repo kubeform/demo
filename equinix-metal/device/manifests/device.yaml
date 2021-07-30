@@ -1,0 +1,16 @@
+apiVersion: device.equinixmetal.kubeform.com/v1alpha1
+kind: Device
+metadata:
+  name: kubeform-device
+spec:
+  resource:
+    hostname: "kubeform-demo"
+    plan: "c3.small.x86"
+    metro: "sv"
+    operatingSystem: "ubuntu_20_10"
+    billingCycle: "hourly"
+    projectID: ""
+  providerRef:
+    name: equinixmetal-secret
+  terminationPolicy: Delete
+  updatePolicy: Destroy
