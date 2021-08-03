@@ -7,10 +7,10 @@ spec:
     hostname: "kubeform-demo"
     plan: "c3.small.x86"
     metro: "sv"
-    operatingSystem: "ubuntu_20_10"
+    operatingSystem: "ubuntu_20_04"
     billingCycle: "hourly"
     projectID: ""
   providerRef:
-    name: equinixmetal-secret
+    name: equinixmetal-credentials
   terminationPolicy: Delete
   updatePolicy: Destroy
