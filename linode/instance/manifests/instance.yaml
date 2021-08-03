@@ -6,9 +6,9 @@ spec:
   resource:
     region: us-east
     image: linode/ubuntu18.04
-    label: kubeform-demo-update
+    label: kubeform-demo
   providerRef:
-    name: linode-provider-secret
+    name: linode-credentials
   secretRef:
     name: linode-sensitive-secret
   terminationPolicy: DoNotTerminate

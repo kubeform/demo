@@ -1,0 +1,17 @@
+apiVersion: instance.civo.kubeform.com/v1alpha1
+kind: Instance
+metadata:
+  name: kubeform-instance
+spec:
+  resource:
+    hostname: "kubeform-demo-update"
+    size: "g3.xsmall"
+    template: "8eb48e20-e5db-49fe-9cdf-cc8f381c61c6"
+    initialUser: "root"
+    tags:
+      - python
+      - nginx
+  providerRef:
+    name: civo-credentials
+  terminationPolicy: Delete
+  updatePolicy: Destroy

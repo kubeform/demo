@@ -1,0 +1,12 @@
+apiVersion: kubernetes.civo.kubeform.com/v1alpha1
+kind: Cluster
+metadata:
+  name: kubeform-cluster
+spec:
+  resource:
+    name: "kubeform-demo"
+    numTargetNodes: 3
+    targetNodesSize: "g3.k3s.xsmall"
+  providerRef:
+    name: civo-credentials
+  terminationPolicy: Delete
