@@ -1,0 +1,17 @@
+apiVersion: instance.linode.kubeform.com/v1alpha1
+kind: Instance
+metadata:
+  name: kubeform-instance
+spec:
+  resource:
+    region: us-east
+    image: linode/ubuntu18.04
+    label: kubeform-demo
+  providerRef:
+    name: linode-credentials
+  secretRef:
+    name: linode-sensitive-secret
+  terminationPolicy: Delete
+  updatePolicy: DoNotDestroy
+  backendRef:
+    name: backend-secret
